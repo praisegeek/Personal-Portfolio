@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, Cambria, 'Times New Roman', Times, serif;
+
+  --color-primary: #18181B;
+  --color-primary-hover: #27272A;
+  --color-brand-accent: #E87A6E;
+  --color-brand-accent-hover: #D96A5E;
+  --color-brand-blush: #FDEEEA;
+  --color-brand-peach: #FDF2F0;
+  --color-brand-mint: #EAF3F5;
+  --color-brand-slate: #F4F4F6;
+}
+
+@layer utilities {
+  /* Editorial Typography Hierarchy */
+  .font-brand-sans {
+    font-family: var(--font-sans);
+  }
+  .font-brand-serif {
+    font-family: var(--font-serif);
+  }
+
+  .text-eyebrow {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #a1a1aa;
+  }
+
+  .heading-hero {
+    font-size: clamp(2.5rem, 5vw, 4.25rem);
+    line-height: 1.12;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    color: #18181b;
+  }
+
+  .heading-section {
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    line-height: 1.18;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    color: #18181b;
+  }
+
+  .heading-card {
+    font-size: 1.375rem;
+    line-height: 1.3;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #18181b;
+  }
+
+  .heading-quote {
+    font-size: clamp(1.35rem, 2.5vw, 2rem);
+    line-height: 1.35;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: #18181b;
+  }
+
+  .body-lead {
+    font-size: 1.125rem;
+    line-height: 1.65;
+    font-weight: 400;
+    color: #52525b;
+  }
+
+  .body-muted {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #71717a;
+  }
+
+  /* Spacing utilities for spacious negative vertical rhythm */
+  .section-spacing {
+    padding-top: clamp(5rem, 10vw, 9rem);
+    padding-bottom: clamp(5rem, 10vw, 9rem);
+  }
+  
+  .section-spacing-loose {
+    padding-top: clamp(6rem, 12vw, 11rem);
+    padding-bottom: clamp(6rem, 12vw, 11rem);
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
